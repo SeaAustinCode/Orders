@@ -2,70 +2,78 @@ import java.util.ArrayList;
 public class TestOrders {
     public static void main(String[] args) {
 
-        Item item1 = new Item();
-        item1.name = "mocha";
-        item1.price = 5.50;
+        Item item1 = new Item("mocha", 5.50);
+        Item item2 = new Item("latte", 3.75);
+        Item item3 = new Item("drip coffee", 2.50);
+        Item item4 = new Item("cappucino", 3.25);
 
-        Item item2 = new Item();
-        item2.name = "latte";
-        item2.price = 3.75;
+        Order order1 = new Order("Cindhuri");
+        order1.addItem(item1);
+        order1.addItem(item2);
+        order1.display();
 
-        Item item3 = new Item();
-        item3.name = "drip coffee";
-        item3.price = 2.50;
+        Order order2 = new Order("Jimmy");
+        order2.addItem(item1);
+        order2.addItem(item4);
+        order2.setReady(true);
+        System.out.println(order2.getStatusMessage());
+        order2.display();
 
-        Item item4 = new Item();
-        item4.name = "cappucino";
-        item4.price = 3.25;
+        Order order3 = new Order("Noah");
+        order3.addItem(item2);
+        order3.addItem(item2);
+        order3.display();
 
-        Order order1 = new Order();
-        order1.name = "Cindhuri";
-        order1.ready = true;
+        Order order4 = new Order("Sam");
+        order4.addItem(item1);
+        order4.addItem(item2);
+        order4.display();
+        
 
-        Order order2 = new Order();
-        order2.name = "Jimmy";
-        order2.ready = true;
+        Order order5 = new Order();
+        order5.addItem(item1);
+        order5.addItem(item4);
+        order5.addItem(item4);
+        order5.display();
 
-        Order order3 = new Order();
-        order3.name = "Noah";
-        order3.ready = false;
-
-        Order order4 = new Order();
-        order4.name = "Sam";
-        order4.ready = false;
+        Order order6 = new Order();
+        order6.addItem(item4);
+        order6.addItem(item1);
+        order6.addItem(item1);
+        order6.display();
     
-        // Application Simulations
+    //     // Application Simulations
 
-        order2.items.add(item1);
-        order2.total += item1.price;
+    //     order2.items.add(item1);
+    //     order2.total += item1.price;
 
-        order3.items.add(item4);
-        order3.total += item4.price;
+    //     order3.items.add(item4);
+    //     order3.total += item4.price;
 
-        order4.items.add(item2);
-        order4.items.add(item2);
-        order4.items.add(item2);
-        order4.total += item2.price *3;
+    //     order4.items.add(item2);
+    //     order4.items.add(item2);
+    //     order4.items.add(item2);
+    //     order4.total += item2.price *3;
 
-        order1.ready = true;
-        order2.ready = true;
+    //     order1.ready = true;
+    //     order2.ready = true;
 
 
-        // Use this example code to test various orders' updates
-        System.out.printf("Name: %s\n", order1.name);
-        System.out.printf("Total: %s\n", order1.total);
-        System.out.printf("Ready: %s\n", order1.ready);
-        System.out.printf("------------------\n");
-        System.out.printf("Name: %s\n", order2.name);
-        System.out.printf("Total: %s\n", order2.total);
-        System.out.printf("Ready: %s\n", order2.ready);
-        System.out.printf("------------------\n");
-        System.out.printf("Name: %s\n", order3.name);
-        System.out.printf("Total: %s\n", order3.total);
-        System.out.printf("Ready: %s\n", order3.ready);
-        System.out.printf("------------------\n");
-        System.out.printf("Name: %s\n", order4.name);
-        System.out.printf("Total: %s\n", order4.total);
-        System.out.printf("Ready: %s\n", order4.ready);
+    //     // Use this example code to test various orders' updates
+    //     System.out.printf("Name: %s\n", order1.name);
+    //     System.out.printf("Total: %s\n", order1.total);
+    //     System.out.printf("Ready: %s\n", order1.ready);
+    //     System.out.printf("------------------\n");
+    //     System.out.printf("Name: %s\n", order2.name);
+    //     System.out.printf("Total: %s\n", order2.total);
+    //     System.out.printf("Ready: %s\n", order2.ready);
+    //     System.out.printf("------------------\n");
+    //     System.out.printf("Name: %s\n", order3.name);
+    //     System.out.printf("Total: %s\n", order3.total);
+    //     System.out.printf("Ready: %s\n", order3.ready);
+    //     System.out.printf("------------------\n");
+    //     System.out.printf("Name: %s\n", order4.name);
+    //     System.out.printf("Total: %s\n", order4.total);
+    //     System.out.printf("Ready: %s\n", order4.ready);
     }
 }
