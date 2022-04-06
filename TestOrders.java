@@ -41,39 +41,3 @@ public class TestOrders {
         order6.addItem(item1);
         order6.addItem(item1);
         order6.display();
-    
-    //     // Application Simulations
-
-    //     order2.items.add(item1);
-    //     order2.total += item1.price;
-
-    //     order3.items.add(item4);
-    //     order3.total += item4.price;
-
-    //     order4.items.add(item2);
-    //     order4.items.add(item2);
-    //     order4.items.add(item2);
-    //     order4.total += item2.price *3;
-
-    //     order1.ready = true;
-    //     order2.ready = true;
-
-
-    //     // Use this example code to test various orders' updates
-    //     System.out.printf("Name: %s\n", order1.name);
-    //     System.out.printf("Total: %s\n", order1.total);
-    //     System.out.printf("Ready: %s\n", order1.ready);
-    //     System.out.printf("------------------\n");
-    //     System.out.printf("Name: %s\n", order2.name);
-    //     System.out.printf("Total: %s\n", order2.total);
-    //     System.out.printf("Ready: %s\n", order2.ready);
-    //     System.out.printf("------------------\n");
-    //     System.out.printf("Name: %s\n", order3.name);
-    //     System.out.printf("Total: %s\n", order3.total);
-    //     System.out.printf("Ready: %s\n", order3.ready);
-    //     System.out.printf("------------------\n");
-    //     System.out.printf("Name: %s\n", order4.name);
-    //     System.out.printf("Total: %s\n", order4.total);
-    //     System.out.printf("Ready: %s\n", order4.ready);
-    }
-}
